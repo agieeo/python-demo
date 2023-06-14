@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 file_path=open(r'graph.csv')
 local_data=pd.read_csv(file_path)
-local_data
+
 
 # 4.2河北省景点面积和旅客量位居前三的条形图显示
 area=float("{:.1f}".format(local_data['总面积(平方公里)'].mean()))
@@ -20,7 +20,7 @@ addata=local_data.fillna(value=dic)
 data=addata.groupby("省份")
 # 显示河北地区的·数据
 hebei=dict([x for x in data])['河北']
-hebei
+
 # 需要我们绘制直方图
 
 #为正常显示中文字体，添加的代码
